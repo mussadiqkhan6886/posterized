@@ -2,7 +2,7 @@ import { InfiniteMovingCards } from "./ui/InfiniteMovingCollections";
 
 export function MovingCollections() {
   return (
-    <div className="h-160 rounded-md flex flex-col antialiased bg-white items-center justify-center relative overflow-hidden">
+    <div className="rounded-md flex flex-col antialiased bg-white items-center justify-center relative overflow-hidden">
       <InfiniteMovingCards
         items={collections}
         direction="right"
