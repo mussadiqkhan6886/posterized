@@ -4,6 +4,7 @@ import Link from "next/link";
 import { FiChevronDown, FiMenu, FiSearch, FiShoppingBag, FiUser, FiX } from "react-icons/fi";
 import { roboto } from "@/lib/fonts/font";
 import { menuItems } from "@/lib/constants";
+import Image from "next/image";
 
 const Header = () => {
   const [openIndex, setOpenIndex] = useState<null | number>(null);
@@ -33,7 +34,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`${roboto.className} hover:bg-white hover:text-black ${openIndex !== null || mobileOpen || scrolled ? "bg-white text-black" : "text-white border-b border-white"} duration-300  w-full z-50 fixed top-0`}>
+    <header className={`${roboto.className} hover:bg-white hover:text-black ${openIndex !== null || mobileOpen || scrolled ? "bg-white text-black" : "text-white border-b border-white"} ${scrolled && "px-8"} duration-300  w-full z-50 fixed top-0`}>
         <div className="relative z-50">
       <div className="max-w-[1380px] mx-auto flex justify-between items-center px-5 p-4">
         <Link href="/" className="text-2xl font-bold">
@@ -46,7 +47,7 @@ const Header = () => {
             <div key={i} className=" group">
               <button
                 onClick={() => toggleMenu(i)}
-                className="flex uppercase items-center cursor-pointer gap-1 "
+                className="flex uppercase items-center cursor-pointer text-sm gap-1 "
               >
                 {item.title}
                 {item.children && <FiChevronDown size={14} />}
