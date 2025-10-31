@@ -6,3 +6,16 @@
   --color-font: rgb(55 65 81);
   --color-white: rgb(255 255 255);
 }
+
+.opacityHeader{
+  animation: appearHeader 300ms ease-in forwards;
+}
+
+@keyframes appearHeader {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}

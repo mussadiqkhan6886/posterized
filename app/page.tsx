@@ -1,10 +1,10 @@
-import React from 'react'
+import Hero from '@/components/Hero'
 
 const Home = () => {
   return (
-    <div>
-      
-    </div>
+    <main className='bg-black min-h-screen w-full'>
+      <Hero />
+    </main>
   )
 }
 

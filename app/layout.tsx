@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { bricolage } from "@/lib/fonts/font";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,6 +18,7 @@ export default function RootLayout({
       <body
         className={` ${bricolage.className} antialiased`}
       >
+        <Header />
         {children}
       </body>
     </html>
