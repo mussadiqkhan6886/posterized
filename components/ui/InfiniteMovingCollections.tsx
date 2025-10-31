@@ -74,7 +74,7 @@ export const InfiniteMovingCards = ({
     <div
       ref={containerRef}
       className={cn(
-        "scroller relative z-20 max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+        "scroller relative z-20 max-w-7xl overflow-hidden",
         className,
       )}
     >
@@ -96,8 +96,8 @@ export const InfiniteMovingCards = ({
                 aria-hidden="true"
                 className="user-select-none pointer-events-none absolute -top-0.5 -left-0.5 -z-1 h-[calc(100%+4px)] w-[calc(100%+4px)]"
               ></div>
-              <Image className="w-full h-full object-center object-cover" src={item.image} alt={item.name} width={250} height={250} />
-              <p className="font-thin text-center text-lg uppercase mt-3">{item.name}</p>
+              <Image className="w-full group h-full cursor-pointer object-center object-cover" src={item.image} alt={item.name} width={450} height={450} />
+              <p className="font-thin text-center text-lg uppercase mt-3 group-hover:underline">{item.name}</p>
             </blockquote>
           </li>
         ))}

@@ -8,26 +8,32 @@ import { menuItems } from "@/lib/constants";
 const Header = () => {
   const [openIndex, setOpenIndex] = useState<null | number>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false)
 
   const toggleMenu = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+   useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768) setMobileOpen(false);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // ✅ Detect scroll to change header color
   useEffect(() => {
-    window.addEventListener("resize", () => {
-        if(window.innerWidth >= 768){
-            setMobileOpen(false)
-        }
-    })
-    return window.removeEventListener("resize", () => {
-        if(window.innerWidth >= 768){
-            setMobileOpen(false)
-        }
-    })
-  }, [])
+    const handleScroll = () => {
+      if (window.scrollY > 50) setScrolled(true);
+      else setScrolled(false);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className={`${roboto.className} hover:bg-white hover:text-black ${openIndex !== null || mobileOpen ? "bg-white text-black" : "text-white border-b border-white"} duration-300  w-full z-50 fixed top-0`}>
+    <header className={`${roboto.className} hover:bg-white hover:text-black ${openIndex !== null || mobileOpen || scrolled ? "bg-white text-black" : "text-white border-b border-white"} duration-300  w-full z-50 fixed top-0`}>
         <div className="relative z-50">
       <div className="max-w-[1380px] mx-auto flex justify-between items-center px-5 p-4">
         <Link href="/" className="text-2xl font-bold">
