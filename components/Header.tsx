@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { FiChevronDown, FiMenu, FiSearch, FiShoppingBag, FiUser, FiX } from "react-icons/fi";
-import { menuItems } from "@/lib/fonts/constants";
 import { roboto } from "@/lib/fonts/font";
+import { menuItems } from "@/lib/constants";
 
 const Header = () => {
   const [openIndex, setOpenIndex] = useState<null | number>(null);
@@ -27,20 +27,20 @@ const Header = () => {
   }, [])
 
   return (
-    <header className={`${roboto.className} hover:bg-white hover:text-black ${openIndex !== null || mobileOpen ? "bg-white text-black" : "text-white border-b border-white"} duration-300  w-full  fixed top-0`}>
-        <div className="relative">
+    <header className={`${roboto.className} hover:bg-white hover:text-black ${openIndex !== null || mobileOpen ? "bg-white text-black" : "text-white border-b border-white"} duration-300  w-full z-50 fixed top-0`}>
+        <div className="relative z-50">
       <div className="max-w-[1380px] mx-auto flex justify-between items-center px-5 p-4">
         <Link href="/" className="text-2xl font-bold">
           Posterized
         </Link>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex flex-wrap px-10 items-center justify-center gap-4">
+        <nav className="hidden md:flex flex-wrap px-10 items-center justify-center gap-6 gap-y-4">
           {menuItems.map((item, i) => (
             <div key={i} className=" group">
               <button
                 onClick={() => toggleMenu(i)}
-                className="flex items-center cursor-pointer gap-1 "
+                className="flex uppercase items-center cursor-pointer gap-1 "
               >
                 {item.title}
                 {item.children && <FiChevronDown size={14} />}

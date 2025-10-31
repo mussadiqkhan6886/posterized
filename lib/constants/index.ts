@@ -49,11 +49,6 @@ export const menuItems = [
   },
 
   {
-    title: "How to Avail Offer",
-    href: "/pages/posterized-combo-offers-limited-time",
-  },
-
-  {
     title: "Multi Posters Collections",
     children: [
       {
@@ -125,15 +120,16 @@ export const menuItems = [
     ],
   },
 
-  { title: "Custom Posters", href: "/products/customize-your-wall" },
+  // { title: "Custom Posters", href: "/products/customize-your-wall" },
   { title: "Stickers", href: "/collections/stickerized" },
   { title: "Bulk Posters", href: "/pages/bulk" },
-  { title: "Reviews", href: "/pages/posterized-insta-reivews" },
+  // { title: "Reviews", href: "/pages/posterized-insta-reivews" },
 
   {
     title: "Help Center",
     children: [
       { title: "About Us", href: "/pages/about-us" },
+      { title: "How to Avail Offer", href: "/pages/posterized-combo-offers-limited-time",  },
       { title: "Contact Us", href: "/pages/contact-us" },
       { title: "Terms and Conditions", href: "/pages/terms-and-conditions" },
       { title: "Cancellation and Shipping Policy", href: "/pages/cancellation-and-shipping-policy" },
