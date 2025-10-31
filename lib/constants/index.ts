@@ -138,3 +138,27 @@ export const menuItems = [
     ],
   },
 ];
+
+export const exploreSections = [
+  {
+    title: "XL Art Prints",
+    description:
+      "Create a captivating focal point and add a sense of grandeur and elegance with our large museum-sized art prints.",
+    button: "Explore",
+    image: "/expolore.jpg",
+  },
+  {
+    title: "New Arrivals",
+    description:
+      "Explore our newest artist collaboration and browse all the latest art prints added to the collection.",
+    button: "Discover",
+    image: "/expolore2.jpg",
+  },
+  {
+    title: "Most Popular",
+    description:
+      "This is your selection — Explore the current bestselling art prints and find your own favourites.",
+    button: "Explore",
+    image: "/expolore.jpg",
+  },
+];

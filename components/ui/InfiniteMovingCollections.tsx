@@ -2,6 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 export const InfiniteMovingCards = ({
@@ -87,19 +88,21 @@ export const InfiniteMovingCards = ({
         )}
       >
         {items.map((item, idx) => (
-          <li
-            className="relative  max-w-full shrink-0"
-            key={item.name}
-          >
-            <blockquote>
-              <div
-                aria-hidden="true"
-                className="user-select-none pointer-events-none absolute -top-0.5 -left-0.5 -z-1 h-[calc(100%+4px)] w-[calc(100%+4px)]"
-              ></div>
-              <Image className="w-full group h-full cursor-pointer object-center object-cover" src={item.image} alt={item.name} width={450} height={450} />
-              <p className="font-thin text-center text-lg uppercase mt-3 group-hover:underline">{item.name}</p>
-            </blockquote>
-          </li>
+          <li key={item.name} className="relative shrink-0 w-[300px] h-[400px]  ">
+            <Link href={item.link}>
+                <Image
+                src={item.image}
+                alt={item.name}
+                width={300}
+                height={400}
+                className="object-cover w-full h-[90%] transition-transform group duration-300  "
+                />
+                <p className="text-center text-lg uppercase mt-4 font-thin group-hover:underline text-black">
+                {item.name}
+                </p>
+            </Link>
+        </li>
+
         ))}
       </ul>
     </div>
