@@ -88,7 +88,7 @@ export const InfiniteMovingCards = ({
         )}
       >
         {items.map((item, idx) => (
-          <li key={item.name} className="relative shrink-0 w-[240px] h-[300px]  ">
+          <li key={item.name} className="relative shrink-0 w-[200px] h-[250px] md:w-[240px] md:h-[300px]  ">
             <Link href={item.link}>
                 <Image
                 src={item.image}

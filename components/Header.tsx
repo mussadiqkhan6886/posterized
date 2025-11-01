@@ -17,7 +17,7 @@ const Header = () => {
 
    useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 768) setMobileOpen(false);
+      if (window.innerWidth >= 1368) setMobileOpen(false);
     };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
@@ -42,7 +42,7 @@ const Header = () => {
         </Link>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex flex-wrap px-10 items-center justify-center gap-6 gap-y-4">
+        <nav className="hidden lg:flex flex-wrap px-10 items-center justify-center gap-6 gap-y-4">
           {menuItems.map((item, i) => (
             <div key={i} className=" group">
               <button
@@ -85,7 +85,7 @@ const Header = () => {
             </div>
           ))}
         </nav>
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-6">
             <FiSearch />
             <FiShoppingBag />
             <FiUser />
@@ -93,7 +93,7 @@ const Header = () => {
          {/* Mobile Toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden text-2xl"
+          className="lg:hidden text-2xl"
         >
           {mobileOpen ? <FiX /> : <FiMenu />}
         </button>
@@ -101,7 +101,7 @@ const Header = () => {
 
       {/* Mobile Dropdown */}
 {mobileOpen && (
-  <div className="md:hidden fixed inset-0 top-[64px] bg-white z-50 flex flex-col">
+  <div className="lg:hidden fixed inset-0 top-[64px] bg-white z-50 flex flex-col">
     {/* Scrollable content */}
     <nav className="flex-1 overflow-y-auto p-4 space-y-2 text-black">
       {menuItems.map((item, i) => (

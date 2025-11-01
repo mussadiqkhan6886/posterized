@@ -35,7 +35,7 @@ const Foryou = () => {
                 height={350}
                 src={item.image}
                 alt={item.name || 'Product'}
-                className="w-full h-full object-cover cursor-pointer "
+                className="w-full h-[400px] object-cover cursor-pointer "
               />
               <div className="p-4 text-center">
                 <div className='flex justify-between items-center'>

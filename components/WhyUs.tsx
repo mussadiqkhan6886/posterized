@@ -11,8 +11,8 @@ import { FiStar } from 'react-icons/fi';
 
 const WhyUs = () => {
   return (
-    <section className="my-20 max-w-[1240px] mx-auto">
-        <h3 className={`text-5xl mb-8 text-center`}>Why Choose Us</h3>
+    <section className="my-20 max-w-[1240px] px-10 mx-auto">
+        <h3 className={`text-4xl md:text-5xl mb-8 text-center`}>Why Choose Us</h3>
         <div className='grid lg:grid-cols-4 gap-5 md:grid-cols-2 grid-cols-1 my-10'>
             {whyUs.map((item, i) => (
                 <div className='shadow-xl flex items-center flex-col  p-3' key={i}>
