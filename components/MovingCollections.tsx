@@ -8,11 +8,16 @@ export function MovingCollections() {
         direction="right"
         speed="slow"
       />
+      <InfiniteMovingCards
+        items={collections2}
+        direction="left"
+        speed="slow"
+      />
     </div>
   );
 }
 
-export const collections = [
+const collections = [
   {
     name: "Custom Poster",
     link: "/products/customize-your-wall",
@@ -43,11 +48,9 @@ export const collections = [
     link: "/collections/hip-hop",
     image: "/CARS.webp",
   },
-  {
-    name: "Video Game",
-    link: "/collections/games",
-    image: "/CULTURE.webp",
-  },
+];
+
+const collections2 = [
   {
     name: "Motivate",
     link: "/collections/gym",
@@ -73,5 +76,10 @@ export const collections = [
     link: "https://www.posterized.in/pages/all-collections",
     image: "/CARS.webp",
   },
-];
+  {
+    name: "Video Game",
+    link: "/collections/games",
+    image: "/CULTURE.webp",
+  },
+]
 

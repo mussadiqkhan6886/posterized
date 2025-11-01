@@ -162,3 +162,20 @@ export const exploreSections = [
     image: "/expolore.jpg",
   },
 ];
+
+
+export const foryouData = [
+  {image: "/foryou1.jpg", name: "Name", price: 100},
+  {image: "/foryou2.jpg", name: "Name", price: 100},
+  {image: "/foryou3.jpg", name: "Name", price: 100},
+  {image: "/foryou4.jpg", name: "Name", price: 100},
+  {image: "/foryou1.jpg", name: "Name", price: 100},
+  {image: "/foryou2.jpg", name: "Name", price: 100},
+  {image: "/foryou3.jpg", name: "Name", price: 100},
+  {image: "/foryou4.jpg", name: "Name", price: 100},
+  {image: "/foryou1.jpg", name: "Name", price: 100},
+  {image: "/foryou2.jpg", name: "Name", price: 100},
+  {image: "/foryou3.jpg", name: "Name", price: 100},
+  {image: "/foryou4.jpg", name: "Name", price: 100},
+  
+]

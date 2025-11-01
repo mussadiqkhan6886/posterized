@@ -88,13 +88,13 @@ export const InfiniteMovingCards = ({
         )}
       >
         {items.map((item, idx) => (
-          <li key={item.name} className="relative shrink-0 w-[300px] h-[400px]  ">
+          <li key={item.name} className="relative shrink-0 w-[240px] h-[300px]  ">
             <Link href={item.link}>
                 <Image
                 src={item.image}
                 alt={item.name}
-                width={300}
-                height={400}
+                width={240}
+                height={300}
                 className="object-cover w-full h-[90%] transition-transform group duration-300  "
                 />
                 <p className="text-center text-lg uppercase mt-4 font-thin group-hover:underline text-black">
