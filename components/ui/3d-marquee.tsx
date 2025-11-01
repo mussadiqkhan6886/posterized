@@ -3,7 +3,9 @@
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-export const ThreeDMarquee = ({
+import React from "react";
+
+const ThreeD = ({
   images,
   className,
 }: {
@@ -135,3 +137,5 @@ const GridLineVertical = ({
     ></div>
   );
 };
+
+export const ThreeDMarquee = React.memo(ThreeD)
