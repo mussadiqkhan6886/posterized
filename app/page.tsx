@@ -2,6 +2,8 @@ import Collections from '@/components/Collections'
 import Explore from '@/components/Explore'
 import Foryou from '@/components/Foryou'
 import Hero from '@/components/Hero'
+import NewIn from '@/components/NewIn'
+import WhyUs from '@/components/WhyUs'
 
 const Home = () => {
   return (
@@ -10,6 +12,8 @@ const Home = () => {
       <Collections />
       <Explore />
       <Foryou />
+      <NewIn />
+      <WhyUs />
     </main>
   )
 }

@@ -179,3 +179,73 @@ export const foryouData = [
   {image: "/foryou4.jpg", name: "Name", price: 100},
   
 ]
+import { FiCheckCircle, FiUploadCloud, FiGift, FiTruck } from "react-icons/fi";
+
+export const whyUs = [
+  {
+    id: 1,
+    title: "Quality Guaranteed",
+    description:
+      "Quality is our top priority. Each poster is meticulously crafted using premium materials.",
+    icon: FiCheckCircle,
+  },
+  {
+    id: 2,
+    title: "Custom Creations",
+    description:
+      "Upload your own images or designs and create personalized posters that reflect your personality.",
+    icon: FiUploadCloud,
+  },
+  {
+    id: 3,
+    title: "Exclusive Offers",
+    description:
+      "We're constantly rolling out exciting offers to help you save big on your favorite designs.",
+    icon: FiGift,
+  },
+  {
+    id: 4,
+    title: "Free Shipping",
+    description:
+      "Enjoy free delivery on prepaid orders—no shipping fees mean more savings and convenience for you!",
+    icon: FiTruck,
+  },
+];
+
+export const reviews = [
+  {
+    id: 1,
+    name: "Ayesha Malik",
+    rating: 5,
+    review:
+      "Absolutely loved my poster! The print quality is incredible — colors are sharp and vibrant. It completely transformed my room’s vibe.",
+  },
+  {
+    id: 2,
+    name: "Hassan Raza",
+    rating: 4,
+    review:
+      "Ordered a custom design and it came out exactly as I imagined. The paper quality feels premium. Delivery took a couple of extra days, but worth the wait!",
+  },
+  {
+    id: 3,
+    name: "Sarah Khan",
+    rating: 5,
+    review:
+      "I’ve ordered from many online stores, but this one stands out. The attention to detail and packaging were amazing. Highly recommended for decor lovers!",
+  },
+  {
+    id: 4,
+    name: "Bilal Ahmed",
+    rating: 5,
+    review:
+      "Got a set of three posters for my workspace. The minimal design and matte finish make them look super classy. Will definitely buy more soon!",
+  },
+  {
+    id: 5,
+    name: "Zainab Tariq",
+    rating: 4,
+    review:
+      "The quality is top-notch and the customization process was super easy. Just wish there were more size options available. Still, love my purchase!",
+  },
+];
